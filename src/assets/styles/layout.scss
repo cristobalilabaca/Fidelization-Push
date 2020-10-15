@@ -2,3 +2,25 @@ html, body {
   margin: 0;
   padding: 0;
 }
+
+.log {
+  float: right;
+  display: inline-block;
+}
+
+.saludo {
+  display: flex;
+  justify-content: center;
+  margin-top: 19%;
+  align-items: center;
+}
+
+.inicio {
+  width: 150px;
+  margin: 0;
+}
+
+header {
+  background-color: aquamarine;
+  padding: 15px;
+}

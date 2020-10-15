@@ -11,8 +11,25 @@
 
   <body>
     <header>
-      <div id="logo">
-        <img src="<%= assetPath('logo.png') %>" alt="Logo" />
+      <div>
+        <div class="inicio">
+          <a href="\">Página Principal</a>
+        </div>
+        <div class="log">
+          <% if (currentUser) { %>
+            <form action="<%= destroySessionPath %>" method="POST">
+              <input type="hidden" name="_method" value="delete" />
+              <span>Bienvenido, <%= currentUser.name %></span>
+              <input type="submit" value="Cerrar Sesión" />
+            </form>
+          <% } else { %>
+            <div>
+              <span>¡Bienvenido!</span>
+              <a href="<%= newSessionPath %>">Iniciar Sesión</a>
+              <a href="<%= newUserPath %>">Crear Nuevo Usuario</a>
+            </div>
+          <% } %>
+        </div>
       </div>
     </header>
     <%- body %>

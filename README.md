@@ -1,5 +1,15 @@
 # Template
 
+importante:
+
+./node_modules/.bin/sequelize db:seed:undo:all
+
+./node_modules/.bin/sequelize db:migrate:undo:all
+
+./node_modules/.bin/sequelize db:migrate
+
+./node_modules/.bin/sequelize db:seed:all
+
 Template built with [koa](http://koajs.com/) for IIC2513 - Tecnologías y Aplicaciones Web, Pontificia Universidad Católica de Chile.
 
 ## Prerequisites:

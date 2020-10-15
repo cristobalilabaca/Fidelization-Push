@@ -1,0 +1,25 @@
+<div>
+  <% if (locals.notice) { %>
+    <div className="notice"><%= notice %></div>
+  <% } %>
+  <h1>Login</h1>
+  <% if (locals.error) { %>
+    <div>
+      <%= error %>
+    </div>
+  <% } %>
+  <form action="<%= createSessionPath %>" method="post">
+    <input type="hidden" name="_method" value="put" />
+    <div>
+      <label for="username">Username</label>
+      <input type="text" name="username" value="<%= locals.username %>" />
+    </div>
+    <div>
+      <label for="password">Password</label>
+      <input type="password" name="password" value="<%= locals.password %>" />
+    </div>
+    <div>
+      <input type="submit" name="sign-in" value="Sign In" />
+    </div>
+  </form>
+</div>

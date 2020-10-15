@@ -1,6 +1,7 @@
-<h1>Hello world</h1>
-<p>
-  App web version
-  <%= appVersion %>
-</p>
-<div id="react-app">Here a React app will be rendered</div>
+<div class="saludo">
+  <% if (currentUser) { %>
+    <a href="<%= personsPath %>">Buscar Cliente</a>
+  <% } else { %>
+    <h1>Bienvendio a Fidelization Pull!</h1>
+  <% } %>
+</div>
